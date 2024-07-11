@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 3.9%;
+
+		--dark: #1e2832;
+
+		--muted: 0 0% 96.1%;
+		--muted-foreground: 0 0% 45.1%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 3.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 3.9%;
+
+		--border: #1e2832;
+		--input: 0 0% 89.8%;
+
+		--primary: #1e2832;
+		--primary-foreground: 0 0% 98%;
+
+		--secondary: 0 0% 96.1%;
+		--secondary-foreground: 0 0% 9%;
+
+		--accent: 0 100% 46.3%;
+		--accent-foreground: 0 0% 100%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 0 0% 3.9%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 0 0% 3.9%;
+		--foreground: 0 0% 98%;
+
+		--muted: 0 0% 14.9%;
+		--muted-foreground: 0 0% 63.9%;
+
+		--popover: 0 0% 3.9%;
+		--popover-foreground: 0 0% 98%;
+
+		--card: 0 0% 3.9%;
+		--card-foreground: 0 0% 98%;
+
+		--border: #fefce8;
+		--input: 0 0% 14.9%;
+
+		--primary: #fefce8;
+		--primary-foreground: 0 0% 98%;
+
+		--secondary: 30% 40% 50%;
+		--secondary-foreground: 0 0% 98%;
+
+		--accent: 0 0% 98%;
+		--accent-foreground: 0 0% 9%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 0 0% 83.1%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "IBM Plex Sans Arabic";
+	@apply overflow-x-hidden;
+}
+
+.sevillana-regular {
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:lang(ar) {
+	font-family: "Cairo";
+}
+
+.container {
+	@apply max-w-6xl;
+}
+
+.text-red-gradient {
+	background: linear-gradient(90deg, #ec1c24 0%, #8c1b20 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+section {
+	padding-block: 4rem;
+}
+.heading1 {
+	@apply text-2xl sm:text-3xl lg:text-5xl font-extrabold leading-[1.45];
+}
+.heading3 {
+	@apply text-center max-w-2xl dark:text-[#DFDFDF] text-sm sm:text-[18px] font-light;
+}
+.cent {
+	@apply flex justify-center items-center;
+}
